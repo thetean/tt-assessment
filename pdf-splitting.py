@@ -188,4 +188,3 @@ if __name__ == "__main__":
     message_id = str(uuid.uuid1())
     pdf_file = S3InputObject({"S3ObjectName": key, "S3Bucket": bucket}, message_id)
     process_job = pdf_file.split_upload_pages()
-    print(process_job)
