@@ -133,6 +133,7 @@ class S3InputObject:
             List[Page]: A list of `Page` objects, containing the uploaded splitting pages.
 
         """
+
         self._lazy_download()
         pages = []
         s3_client = boto3.client('s3')
@@ -182,7 +183,7 @@ class S3InputObject:
         return pages
 
 
-if __name__ == "__main__":
+def lambda_handler(event, context):
     key = 'input/test_auftrag.pdf'
     bucket = 'tt-assessment-bucket'
     message_id = str(uuid.uuid1())
