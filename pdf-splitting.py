@@ -183,7 +183,15 @@ class S3InputObject:
         return pages
 
 
-def lambda_handler(event, context):
+# HINT: Keep the method lambda_handler() in mind for Assignment 2 and 3    
+#def lambda_handler(event, context):
+#    key = 'input/test_auftrag.pdf'
+#    bucket = 'tt-assessment-bucket'
+#    message_id = str(uuid.uuid1())
+#    pdf_file = S3InputObject({"S3ObjectName": key, "S3Bucket": bucket}, message_id)
+#    process_job = pdf_file.split_upload_pages()
+    
+if __name__ == '__main__':
     key = 'input/test_auftrag.pdf'
     bucket = 'tt-assessment-bucket'
     message_id = str(uuid.uuid1())
